@@ -98,9 +98,9 @@ if ($trackid>0 && $userid>0) {
         $xml->endElement();
       $xml->endElement();
       // marker styles
-      addStyle($xml,"red","http://maps.google.com/mapfiles/markerA.png");
-      addStyle($xml,"green","http://maps.google.com/mapfiles/marker_greenB.png");
-      addStyle($xml,"gray","http://labs.google.com/ridefinder/images/mm_20_gray.png");
+      addStyle($xml,"red","//maps.google.com/mapfiles/markerA.png");
+      addStyle($xml,"green","//maps.google.com/mapfiles/marker_greenB.png");
+      addStyle($xml,"gray","//labs.google.com/ridefinder/images/mm_20_gray.png");
       $style = "#redStyle"; // for first element
       $i = 0;
       $totalMeters = 0;

@@ -121,10 +121,10 @@ function setMarker(p,i,posLen) {
     position: p.coordinates,
     title: p.dateoccured
   });
-  if (latest==1) { marker.setIcon('http://maps.google.com/mapfiles/dd-end.png') }
-  else if (i==0) { marker.setIcon('http://maps.google.com/mapfiles/marker_greenA.png') }
-  else if (i==posLen-1) { marker.setIcon('http://maps.google.com/mapfiles/markerB.png') }
-  else { marker.setIcon('http://labs.google.com/ridefinder/images/mm_20_gray.png') }
+  if (latest==1) { marker.setIcon('//maps.google.com/mapfiles/dd-end.png') }
+  else if (i==0) { marker.setIcon('//maps.google.com/mapfiles/marker_greenA.png') }
+  else if (i==posLen-1) { marker.setIcon('//maps.google.com/mapfiles/markerB.png') }
+  else { marker.setIcon('//labs.google.com/ridefinder/images/mm_20_gray.png') }
   // popup
   var content = '<div id="popup">'+
     '<div id="pheader">'+lang_user+': '+p.username.toUpperCase()+'<br />'+lang_track+': '+p.trackname.toUpperCase()+
@@ -161,7 +161,7 @@ function addChartEvent(chart) {
 		if (selection) {
 			var id = selection.row;
 			var icon = markers[id].getIcon();
-			markers[id].setIcon('http://maps.google.com/mapfiles/marker_orange.png');
+			markers[id].setIcon('//maps.google.com/mapfiles/marker_orange.png');
 			altTimeout = setTimeout(function() { markers[id].setIcon(icon); },2000);
 		}
 	}); 	
