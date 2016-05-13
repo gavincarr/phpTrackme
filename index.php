@@ -165,7 +165,7 @@ print
 ';
 if ($mapapi == "gmaps") {
   print       
-'   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?'.(isset($gkey)?'key='.$gkey.'&':'').'sensor=false"></script>    
+'   <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?'.(isset($gkey)?'key='.$gkey:'')."></script>    
     <script type="text/javascript" src="api_gmaps.js"></script>   
 ';
 }

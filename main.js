@@ -318,7 +318,7 @@ function loadMapAPI(api) {
 	var url = new Array();
 	if (api=='gmaps') { 
 		url.push('api_gmaps.js');
-		url.push('//maps.googleapis.com/maps/api/js?'+((gkey!==null)?('key='+gkey+'&'):'')+'sensor=false&callback=init'); 
+		url.push('//maps.googleapis.com/maps/api/js?'+((gkey!==null)?('key='+gkey+'&'):'')+'callback=init'); 
 	}
 	else { 
 		url.push('api_openlayers.js'); 
