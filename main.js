@@ -322,7 +322,7 @@ function loadMapAPI(api) {
 	}
 	else { 
 		url.push('api_openlayers.js'); 
-		url.push('http://openlayers.org/api/OpenLayers.js'); 
+		url.push('//openlayers.org/api/OpenLayers.js'); 
 	}
 	addScript(url[0]);
 	waitAndLoad(api,url);	

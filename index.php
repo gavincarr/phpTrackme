@@ -171,7 +171,7 @@ if ($mapapi == "gmaps") {
 }
 else {
   print
-'   <script type="text/javascript" src="http://openlayers.org/api/OpenLayers.js"></script>    
+'   <script type="text/javascript" src="//openlayers.org/api/OpenLayers.js"></script>    
     <script type="text/javascript" src="api_openlayers.js"></script>
 ';
 }

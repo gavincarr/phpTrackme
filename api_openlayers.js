@@ -44,34 +44,34 @@ function init() {
 	if (layer_ocm==1) {
 	  // OpenCycleMap
     var ocm = new OpenLayers.Layer.OSM('OpenCycleMap',
-      ['http://a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png',
-      'http://b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png',
-      'http://c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png']);
+      ['//a.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png',
+      '//b.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png',
+      '//c.tile.opencyclemap.org/cycle/${z}/${x}/${y}.png']);
     map.addLayer(ocm);
   }
 	if (layer_mq==1) {
 	  // MapQuest-OSM
     var mq = new OpenLayers.Layer.OSM('MapQuest-OSM',
-      ['http://otile1.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
-      'http://otile2.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
-      'http://otile3.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
-      'http://otile4.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg']);
+      ['//otile1.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
+      '//otile2.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
+      '//otile3.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg',
+      '//otile4.mqcdn.com/tiles/1.0.0/map/${z}/${x}/${y}.jpg']);
     map.addLayer(mq);
   }
 	if (layer_osmapa==1) {
 	  // osmapa.pl
     var osmapa = new OpenLayers.Layer.OSM('osmapa.pl', 
-      ['http://a.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png',
-      'http://b.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png',
-      'http://c.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png']);
+      ['//a.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png',
+      '//b.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png',
+      '//c.osm.trail.pl/osmapa.pl/${z}/${x}/${y}.png']);
     map.addLayer(osmapa);
   }
 	if (layer_ump==1) {
 	  // UMP
     var ump = new OpenLayers.Layer.OSM('UMP', 
-      ['http://1.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png',
-      'http://2.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png',
-      'http://3.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png']);
+      ['//1.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png',
+      '//2.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png',
+      '//3.tiles.ump.waw.pl/ump_tiles/${z}/${x}/${y}.png']);
     map.addLayer(ump);
   }  
         var position = new OpenLayers.LonLat(init_longitude,init_latitude).transform(wgs84, mercator);
@@ -145,13 +145,13 @@ function setMarker(p,i,posLen) {
   var lonLat = new OpenLayers.LonLat(p.longitude,p.latitude).transform(wgs84,mercator);
   var size = new OpenLayers.Size(21, 25);
   var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);	
-  if (latest==1) { var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png',size,offset); }
-  else if (i==0) { var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker-green.png',size,offset); }
-  else if (i==posLen-1) { var icon = new OpenLayers.Icon('http://www.openstreetmap.org/openlayers/img/marker.png',size,offset); }
+  if (latest==1) { var icon = new OpenLayers.Icon('//www.openstreetmap.org/openlayers/img/marker.png',size,offset); }
+  else if (i==0) { var icon = new OpenLayers.Icon('//www.openstreetmap.org/openlayers/img/marker-green.png',size,offset); }
+  else if (i==posLen-1) { var icon = new OpenLayers.Icon('//www.openstreetmap.org/openlayers/img/marker.png',size,offset); }
   else { 
   	size = new OpenLayers.Size(12, 20); 
   	offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-  	var icon = new OpenLayers.Icon('http://labs.google.com/ridefinder/images/mm_20_gray.png',size,offset); 
+  	var icon = new OpenLayers.Icon('//labs.google.com/ridefinder/images/mm_20_gray.png',size,offset); 
   }
   var marker = new OpenLayers.Marker(lonLat,icon);
 	layerMarkers.addMarker(marker);	
@@ -197,7 +197,7 @@ function addChartEvent(chart) {
 			var id = selection.row;
 			var marker = layerMarkers.markers[id];
 			var url = marker.icon.url;
-			marker.setUrl('http://www.openstreetmap.org/openlayers/img/marker-gold.png');
+			marker.setUrl('//www.openstreetmap.org/openlayers/img/marker-gold.png');
 			altTimeout = setTimeout(function() { marker.setUrl(url); },2000);
 		}
 	}); 	
