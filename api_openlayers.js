@@ -39,7 +39,11 @@ function init() {
 	};		
 	map = new OpenLayers.Map('map-canvas', options);
 	// default layer: OpenStreetMap
-	var mapnik = new OpenLayers.Layer.OSM();
+	var mapnik = new OpenLayers.Layer.OSM("OpenStreetMap", 
+          // Official OSM tileset as protocol-independent URLs
+          [ '//a.tile.openstreetmap.org/${z}/${x}/${y}.png',
+            '//b.tile.openstreetmap.org/${z}/${x}/${y}.png',
+            '//c.tile.openstreetmap.org/${z}/${x}/${y}.png']); 
 	map.addLayer(mapnik);
 	if (layer_ocm==1) {
 	  // OpenCycleMap
@@ -151,7 +155,7 @@ function setMarker(p,i,posLen) {
   else { 
   	size = new OpenLayers.Size(12, 20); 
   	offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
-  	var icon = new OpenLayers.Icon('//labs.google.com/ridefinder/images/mm_20_gray.png',size,offset); 
+  	var icon = new OpenLayers.Icon('//maps.gstatic.com/mapfiles/ridefinder-images/mm_20_gray.png',size,offset);
   }
   var marker = new OpenLayers.Marker(lonLat,icon);
 	layerMarkers.addMarker(marker);	
